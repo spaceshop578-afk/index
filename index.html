@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Animation Style Guide — @sagatovn</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:#fff;color:#111;line-height:1.5}
+header{padding:70px 7vw 45px;border-bottom:1px solid #eee;position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);z-index:5}
+.kicker{font-size:13px;letter-spacing:.16em;color:#777;text-transform:uppercase}h1{font-size:clamp(40px,6vw,82px);line-height:.95;margin:12px 0 18px;letter-spacing:-.05em}header p{max-width:800px;color:#555;font-size:18px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}nav a{text-decoration:none;color:#111;border:1px solid #ddd;border-radius:999px;padding:7px 12px;font-size:12px}
+main{max-width:1250px;margin:auto;padding:45px 28px 100px}.card{display:grid;grid-template-columns:43% 57%;border-bottom:1px solid #e7e7e7;padding:55px 0;gap:45px;scroll-margin-top:170px}
+.visual{height:440px;border-radius:28px;position:relative;overflow:hidden;background:#f4f4f4;border:1px solid #e5e5e5}
+.visual>span{position:absolute;left:25px;top:20px;font-size:12px;color:#888;z-index:2}.visual-label{position:absolute;left:28px;bottom:25px;font-size:26px;font-weight:800;z-index:3}
+.shape{position:absolute}.a{width:180px;height:180px;border-radius:50%;left:24%;top:22%;background:#222}
+.b{width:120px;height:120px;right:15%;bottom:20%;border:16px solid #777;transform:rotate(25deg)}
+.c{width:230px;height:24px;left:25%;bottom:22%;background:#999;transform:rotate(-18deg)}
+.content h2{font-size:42px;letter-spacing:-.04em;margin:4px 0 16px}.eyebrow{font-size:12px;letter-spacing:.14em;color:#888;font-weight:700}
+.content p{font-size:16px;color:#444;max-width:650px}.prompt{margin-top:20px;padding:17px 19px;border-radius:16px;background:#f7f7f7;border:1px solid #e8e8e8}
+.prompt b{display:block;font-size:11px;letter-spacing:.12em;margin-bottom:9px}code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:#333;white-space:pre-wrap}
+.video{background:#111;color:#fff;border-color:#111}.video code{color:#eee}
+footer{padding:40px 7vw;border-top:1px solid #eee;color:#888;font-size:13px;display:flex;justify-content:space-between}
+@media(max-width:850px){header{position:relative;padding:45px 25px 30px}main{padding:20px}.card{grid-template-columns:1fr;gap:25px;padding:35px 0}.visual{height:300px}.content h2{font-size:32px}footer{padding:30px 25px}}
+
+<style>
+.example-photo{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95)}
+.visual{background:#eee}
+.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.58));pointer-events:none}
+.visual-title{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.source-tag{position:absolute;right:20px;top:20px;z-index:4;background:rgba(255,255,255,.92);color:#111;padding:7px 10px;border-radius:999px;font-size:11px;text-decoration:none}
+.visual-number{z-index:4;background:rgba(255,255,255,.85);padding:4px 7px;border-radius:8px}
+</style>
+
+</style></head>
+<body>
+<header>
+<div class="kicker">AI CONTENT • VISUAL STYLE GUIDE</div>
+<h1>Виды анимации<br>для AI-контента</h1>
+<p>Практический справочник: <b>что это → для чего → какой результат получите → IMAGE PROMPT → VIDEO PROMPT</b>. От Pixel Art до Mixed Media.</p>
+<nav><a href="#style-01">01 PIXEL ART</a><a href="#style-02">02 HAND-DRAWN 2D</a><a href="#style-03">03 FLAT VECTOR</a><a href="#style-04">04 CARTOON</a><a href="#style-05">05 ANIME / MANGA</a><a href="#style-06">06 COMIC / GRAPHIC NOVEL</a><a href="#style-07">07 CHIBI</a><a href="#style-08">08 CLAYMATION</a><a href="#style-09">09 PAPER CUT-OUT</a><a href="#style-10">10 WATERCOLOR</a><a href="#style-11">11 FELT / TEXTILE</a><a href="#style-12">12 CEL-SHADED 3D</a><a href="#style-13">13 3D CARTOON</a><a href="#style-14">14 LOW POLY</a><a href="#style-15">15 ISOMETRIC 3D</a><a href="#style-16">16 GAME CINEMATIC</a><a href="#style-17">17 REALISTIC CGI</a><a href="#style-18">18 MOTION GRAPHICS</a><a href="#style-19">19 ROTOSCOPE</a><a href="#style-20">20 MIXED MEDIA / HYBRID</a></nav>
+</header>
+<main>
+
+<article class="card" id="style-01">
+  <div class="visual v01"><span>01</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">PIXEL ART</div></div>
+  <div class="content">
+    <div class="eyebrow">8-BIT / 16-BIT</div><h2>PIXEL ART</h2>
+    <p><b>Для чего:</b> Ретро-игры, game art, маскоты, мемы</p>
+    <p><b>Что получите:</b> Крупные видимые пиксели, ограниченная палитра, sprite-эстетика.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>pixel art, 16-bit retro game aesthetic, visible chunky pixels, limited color palette, crisp pixel grid, sprite art, retro game scene</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>stepped sprite movement, frame-by-frame motion, limited animation</code></div>
+  </div>
+</article>
+<article class="card" id="style-02">
+  <div class="visual v02"><span>02</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">HAND-DRAWN 2D</div></div>
+  <div class="content">
+    <div class="eyebrow">TRADITIONAL ANIMATION</div><h2>HAND-DRAWN 2D</h2>
+    <p><b>Для чего:</b> Сказки, storytelling, детский и авторский контент</p>
+    <p><b>Что получите:</b> Рисованные линии, покадровая анимация, живой несовершенный штрих.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>traditional hand-drawn 2D animation, expressive linework, painted background, frame-by-frame animation, organic imperfect lines, hand-painted colors</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>hand-drawn frame-by-frame motion, organic timing, subtle drawing imperfections</code></div>
+  </div>
+</article>
+<article class="card" id="style-03">
+  <div class="visual v03"><span>03</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">FLAT VECTOR</div></div>
+  <div class="content">
+    <div class="eyebrow">VECTOR CARTOON</div><h2>FLAT VECTOR</h2>
+    <p><b>Для чего:</b> Реклама, брендинг, explainer, образовательный контент</p>
+    <p><b>Что получите:</b> Чистые геометрические формы, плоские цвета, минимум текстур.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>modern flat vector cartoon, clean geometric shapes, bold flat colors, minimal shading, smooth vector edges, minimalist 2D illustration</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>smooth vector motion, clean transitions, simple character animation</code></div>
+  </div>
+</article>
+<article class="card" id="style-04">
+  <div class="visual v04"><span>04</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">CARTOON</div></div>
+  <div class="content">
+    <div class="eyebrow">EXPRESSIVE 2D</div><h2>CARTOON</h2>
+    <p><b>Для чего:</b> Юмор, Reels, персонажи, детский контент</p>
+    <p><b>Что получите:</b> Преувеличенная мимика, динамичные позы, мультяшные пропорции.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>expressive 2D cartoon character, exaggerated facial expressions, stylized proportions, bold outlines, dynamic pose, playful shapes</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>squash and stretch, exaggerated facial animation, fast comedic timing</code></div>
+  </div>
+</article>
+<article class="card" id="style-05">
+  <div class="visual v05"><span>05</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">ANIME / MANGA</div></div>
+  <div class="content">
+    <div class="eyebrow">CEL ANIMATION</div><h2>ANIME / MANGA</h2>
+    <p><b>Для чего:</b> Персонажные истории, music videos, cinematic AI</p>
+    <p><b>Что получите:</b> Тонкий linework, выразительные глаза, cel-shading, детализированный фон.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>cinematic Japanese anime aesthetic, clean thin linework, expressive eyes, cel-shaded character, hard-edged graphic shadows, detailed painted background</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>anime character animation, cinematic camera movement, dramatic hair and clothing motion</code></div>
+  </div>
+</article>
+<article class="card" id="style-06">
+  <div class="visual v06"><span>06</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">COMIC / GRAPHIC NOVEL</div></div>
+  <div class="content">
+    <div class="eyebrow">INK / HALFTONE</div><h2>COMIC / GRAPHIC NOVEL</h2>
+    <p><b>Для чего:</b> Action, superhero, постеры, storytelling</p>
+    <p><b>Что получите:</b> Толстые ink-линии, halftone, высокий контраст, динамическая перспектива.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>cinematic comic book illustration, heavy black ink linework, halftone dot shading, high contrast, dynamic perspective, graphic novel aesthetic</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>comic book motion, speed lines, impact frames, dynamic camera movement</code></div>
+  </div>
+</article>
+<article class="card" id="style-07">
+  <div class="visual v07"><span>07</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">CHIBI</div></div>
+  <div class="content">
+    <div class="eyebrow">CUTE MINI CHARACTER</div><h2>CHIBI</h2>
+    <p><b>Для чего:</b> Стикеры, mascots, social media, merchandise</p>
+    <p><b>Что получите:</b> Большая голова, маленькое тело, округлые формы, сильная мимика.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>cute chibi character, oversized head, tiny body, large expressive eyes, rounded proportions, adorable character design</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>cute bouncy motion, exaggerated expressions, playful movement</code></div>
+  </div>
+</article>
+<article class="card" id="style-08">
+  <div class="visual v08"><span>08</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">CLAYMATION</div></div>
+  <div class="content">
+    <div class="eyebrow">STOP MOTION</div><h2>CLAYMATION</h2>
+    <p><b>Для чего:</b> Handmade-реклама, food, детские истории</p>
+    <p><b>Что получите:</b> Пластилиновая фактура, отпечатки пальцев, миниатюрная декорация.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>handcrafted claymation character, stop-motion aesthetic, visible clay texture, fingerprint details, miniature set, handmade imperfections</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>authentic stop-motion movement, stepped motion, subtle frame-by-frame imperfections</code></div>
+  </div>
+</article>
+<article class="card" id="style-09">
+  <div class="visual v09"><span>09</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">PAPER CUT-OUT</div></div>
+  <div class="content">
+    <div class="eyebrow">COLLAGE</div><h2>PAPER CUT-OUT</h2>
+    <p><b>Для чего:</b> Editorial, education, storytelling, необычная реклама</p>
+    <p><b>Что получите:</b> Слои бумаги, ручная вырезка, бумажная фактура, тени между слоями.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>paper cut-out animation, layered paper characters, hand-cut paper shapes, visible paper texture, collage aesthetic, soft layer shadows</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>layered paper movement, stop-motion cutout animation, articulated paper characters</code></div>
+  </div>
+</article>
+<article class="card" id="style-10">
+  <div class="visual v10"><span>10</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">WATERCOLOR</div></div>
+  <div class="content">
+    <div class="eyebrow">STORYBOOK</div><h2>WATERCOLOR</h2>
+    <p><b>Для чего:</b> Сказки, книги, emotional storytelling, editorial</p>
+    <p><b>Что получите:</b> Акварельные растекания, бумага, органичные мазки, dreamy atmosphere.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>hand-painted watercolor animation, storybook illustration, delicate watercolor washes, visible paper texture, organic brush strokes, dreamy atmosphere</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>watercolor elements gently moving, painted frame transitions, dreamy animation</code></div>
+  </div>
+</article>
+<article class="card" id="style-11">
+  <div class="visual v11"><span>11</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">FELT / TEXTILE</div></div>
+  <div class="content">
+    <div class="eyebrow">HANDCRAFTED</div><h2>FELT / TEXTILE</h2>
+    <p><b>Для чего:</b> Детский контент, fashion storytelling, tactile advertising</p>
+    <p><b>Что получите:</b> Волокна ткани, мягкая фактура, handmade-детали.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>handcrafted felt animation, wool felt character, visible fibers, soft textile texture, needle-felted details, miniature handmade environment</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>soft stop-motion movement, tactile fabric deformation, handmade animation</code></div>
+  </div>
+</article>
+<article class="card" id="style-12">
+  <div class="visual v12"><span>12</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">CEL-SHADED 3D</div></div>
+  <div class="content">
+    <div class="eyebrow">3D AS 2D</div><h2>CEL-SHADED 3D</h2>
+    <p><b>Для чего:</b> Anime-like 3D, game characters, stylized commercials</p>
+    <p><b>Что получите:</b> 3D-модель с плоскими цветовыми блоками и жёсткими тенями.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>3D cel-shaded character, anime-inspired visual language, flat color blocks, hard-edged shadows, clean contour lines, stylized 3D geometry</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>stylized 3D animation, anime camera movement, cel-shaded motion</code></div>
+  </div>
+</article>
+<article class="card" id="style-13">
+  <div class="visual v13"><span>13</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">3D CARTOON</div></div>
+  <div class="content">
+    <div class="eyebrow">STYLIZED 3D</div><h2>3D CARTOON</h2>
+    <p><b>Для чего:</b> Commercial, characters, storytelling, branding</p>
+    <p><b>Что получите:</b> Объёмный мультяшный персонаж, гладкие материалы, cinematic light.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>high-end stylized 3D animation, expressive cartoon character, stylized proportions, smooth 3D geometry, polished materials, cinematic lighting</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>smooth 3D character animation, cinematic camera movement, expressive acting</code></div>
+  </div>
+</article>
+<article class="card" id="style-14">
+  <div class="visual v14"><span>14</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">LOW POLY</div></div>
+  <div class="content">
+    <div class="eyebrow">GEOMETRIC 3D</div><h2>LOW POLY</h2>
+    <p><b>Для чего:</b> Game art, tech, abstract visuals, minimalist ads</p>
+    <p><b>Что получите:</b> Упрощённая геометрия, видимые грани, графичный 3D-мир.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>low-poly 3D animation, geometric character design, simplified polygonal forms, flat shading, angular environment, stylized game aesthetic</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>low-poly character movement, geometric camera motion, stylized lighting</code></div>
+  </div>
+</article>
+<article class="card" id="style-15">
+  <div class="visual v15"><span>15</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">ISOMETRIC 3D</div></div>
+  <div class="content">
+    <div class="eyebrow">MINIATURE WORLD</div><h2>ISOMETRIC 3D</h2>
+    <p><b>Для чего:</b> Fintech, IT, business, presentations, infographics</p>
+    <p><b>Что получите:</b> Миниатюрный мир под изометрическим углом, много объектов в одной сцене.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>isometric 3D illustration, stylized miniature world, orthographic camera, clean geometric shapes, detailed tiny objects, soft ambient lighting</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>isometric camera orbit, miniature object animation, smooth explainer motion</code></div>
+  </div>
+</article>
+<article class="card" id="style-16">
+  <div class="visual v16"><span>16</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">GAME CINEMATIC</div></div>
+  <div class="content">
+    <div class="eyebrow">AAA / REALTIME 3D</div><h2>GAME CINEMATIC</h2>
+    <p><b>Для чего:</b> Game trailers, fantasy, action, cinematic storytelling</p>
+    <p><b>Что получите:</b> Детализированный 3D, realistic materials, volumetric light, VFX.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>AAA game cinematic, high-detail 3D character, realistic materials, volumetric lighting, dramatic environment, physically based rendering, cinematic depth of field</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>cinematic character acting, dynamic camera, volumetric atmosphere, high-end VFX</code></div>
+  </div>
+</article>
+<article class="card" id="style-17">
+  <div class="visual v17"><span>17</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">REALISTIC CGI</div></div>
+  <div class="content">
+    <div class="eyebrow">PHOTOREALISTIC CGI</div><h2>REALISTIC CGI</h2>
+    <p><b>Для чего:</b> Luxury product, automotive, architecture, VFX</p>
+    <p><b>Что получите:</b> Физически правдоподобные материалы, кожа, волосы, отражения и свет.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>photorealistic 3D CGI, physically based materials, realistic skin texture, subsurface scattering, individual hair strands, ray-traced reflections, cinematic lighting</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>realistic physical motion, natural camera movement, realistic reflections and shadows</code></div>
+  </div>
+</article>
+<article class="card" id="style-18">
+  <div class="visual v18"><span>18</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">MOTION GRAPHICS</div></div>
+  <div class="content">
+    <div class="eyebrow">TYPOGRAPHY / GRAPHIC</div><h2>MOTION GRAPHICS</h2>
+    <p><b>Для чего:</b> Branding, ads, presentations, social media</p>
+    <p><b>Что получите:</b> Текст, формы, логотипы и графика вместо полноценного персонажного мультфильма.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>premium motion graphics, kinetic typography, minimal geometric shapes, smooth transitions, dynamic composition, modern commercial design</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>kinetic typography, smooth graphic transitions, logo animation, dynamic shapes</code></div>
+  </div>
+</article>
+<article class="card" id="style-19">
+  <div class="visual v19"><span>19</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">ROTOSCOPE</div></div>
+  <div class="content">
+    <div class="eyebrow">LIVE MOTION → DRAWING</div><h2>ROTOSCOPE</h2>
+    <p><b>Для чего:</b> Music videos, art videos, storytelling</p>
+    <p><b>Что получите:</b> Реальное движение сохраняется, но превращается в рисованную анимацию.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>rotoscope animation, realistic human movement translated into hand-drawn animation, natural body motion, expressive linework, cinematic composition</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>preserve realistic body motion, hand-drawn frame-by-frame appearance</code></div>
+  </div>
+</article>
+<article class="card" id="style-20">
+  <div class="visual v20"><span>20</span><div class="shape a"></div><div class="shape b"></div><div class="shape c"></div><div class="visual-label">MIXED MEDIA / HYBRID</div></div>
+  <div class="content">
+    <div class="eyebrow">LIVE ACTION + 2D + 3D</div><h2>MIXED MEDIA / HYBRID</h2>
+    <p><b>Для чего:</b> Premium campaigns, fashion, music video, cinematic SMM</p>
+    <p><b>Что получите:</b> Смешение live action, 2D, 3D, motion graphics и AI VFX.</p>
+    <div class="prompt"><b>IMAGE PROMPT</b><code>mixed-media cinematic animation, live-action environment, stylized 3D character, 2D hand-drawn elements, motion graphics overlays, seamless integration, realistic lighting</code></div>
+    <div class="prompt video"><b>VIDEO PROMPT</b><code>seamless live-action and CG integration, dynamic camera, realistic shadows, stylized VFX</code></div>
+  </div>
+</article>
+<section style="padding:70px 0">
+<div class="eyebrow">PROMPT FORMULA</div><h2 style="font-size:52px;letter-spacing:-.04em">SUBJECT + STYLE + MATERIAL<br>+ LIGHTING + CAMERA + MOTION</h2>
+<p style="font-size:19px;color:#555">Не ограничивайтесь словами «anime» или «cartoon». Описывайте визуальные признаки: линии, материалы, свет, камеру, окружение и движение.</p>
+<div class="prompt"><code>A young designer + stylized 3D + glossy materials + soft cinematic light + 35mm camera + modern studio + slow push-in</code></div>
+</section>
+<section style="padding:20px 0 70px">
+<div class="eyebrow">ИСТОЧНИКИ ДЛЯ ИЗУЧЕНИЯ</div>
+<p>Adobe — Cel Shading • Wikipedia — Traditional Animation • Nima — AI 2D Animation Styles • Mammothic Films — Animation Styles • Tripo — Types of Animation</p>
+</section>
+</main>
+<footer><span>AI Animation Style Guide</span><b>@sagatovn</b></footer>
+</body></html>
